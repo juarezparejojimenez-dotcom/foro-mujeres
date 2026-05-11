@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foro de Mujeres | Plataforma Formativa</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="hero hero--small">
+    <div class="hero__content">
+      <p class="eyebrow">Plataforma de aprendizaje</p>
+      <h1>Foro de Mujeres</h1>
+      <p class="hero__text">
+        Espacio formativo con 6 modulos, materiales, actividades y certificado final.
+      </p>
+      <a class="button" href="#modulos">Ver modulos</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section intro">
+      <div class="section__heading">
+        <p class="section__eyebrow">Base del proyecto</p>
+        <h2>Como quedaria la web</h2>
+      </div>
+      <div class="intro__grid">
+        <article class="card">
+          <h3>Zona del alumno</h3>
+          <p>Acceso a modulos, progreso, actividades y certificado al finalizar.</p>
+        </article>
+        <article class="card">
+          <h3>Contenido por modulos</h3>
+          <p>Cada modulo tendra video, temario, materiales y una actividad final.</p>
+        </article>
+        <article class="card">
+          <h3>Soporte</h3>
+          <p>Seccion de preguntas frecuentes y espacio de contacto con el profesorado.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section modules" id="modulos">
+      <div class="section__heading">
+        <p class="section__eyebrow">Estructura inicial</p>
+        <h2>Los 6 modulos</h2>
+      </div>
+      <div class="modules__grid" id="modulesGrid"></div>
+    </section>
+
+    <section class="section workflow">
+      <div class="section__heading">
+        <p class="section__eyebrow">Paso a paso</p>
+        <h2>Que construiremos despues</h2>
+      </div>
+      <div class="workflow__list">
+        <div class="workflow__item">
+          <span>1</span>
+          <p>Crear la vista individual de cada modulo.</p>
+        </div>
+        <div class="workflow__item">
+          <span>2</span>
+          <p>Anadir materiales reales, enlaces a videos y actividades entregadas por el foro.</p>
+        </div>
+        <div class="workflow__item">
+          <span>3</span>
+          <p>Guardar progreso y activar el certificado final.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/modules-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

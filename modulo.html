@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle del modulo | Foro de Mujeres</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="module-page">
+    <section class="section module-detail">
+      <a class="back-link" href="index.html">Volver a los modulos</a>
+      <div class="module-detail__hero">
+        <div>
+          <p class="section__eyebrow" id="moduleType">Actividad del modulo</p>
+          <h1 id="moduleTitle">Modulo</h1>
+          <p class="hero__text" id="moduleDescription"></p>
+        </div>
+        <div class="status-card">
+          <p class="status-card__label">Estado</p>
+          <strong>Pendiente</strong>
+          <p>Cuando completen la actividad, aqui podremos marcar el modulo como entregado o aprobado.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section module-layout">
+      <article class="content-panel">
+        <h2>Video del modulo</h2>
+        <div class="placeholder-box">
+          <p id="moduleVideo">Aqui podreis insertar el enlace o reproductor del video.</p>
+        </div>
+      </article>
+
+      <article class="content-panel">
+        <h2>Temario</h2>
+        <p id="moduleTopic"></p>
+        <div class="link-list">
+          <a class="button button--light" href="#">Abrir temario</a>
+          <a class="button button--light" href="#">Ver materiales</a>
+        </div>
+      </article>
+
+      <article class="content-panel content-panel--wide">
+        <h2>Actividad final</h2>
+        <p id="moduleActivityText"></p>
+        <div class="activity-box" id="activityBox"></div>
+      </article>
+    </section>
+  </main>
+
+  <script src="js/modules-data.js"></script>
+  <script src="js/modulo.js"></script>
+</body>
+</html>
