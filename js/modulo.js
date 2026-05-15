@@ -29,6 +29,7 @@ document.getElementById("moduleType").textContent = `Actividad: ${moduleData.act
 document.getElementById("moduleTitle").textContent = moduleData.title;
 document.getElementById("moduleDescription").textContent = moduleData.description;
 document.getElementById("moduleVideo").textContent = moduleData.videoText;
+document.title = `${moduleData.title} | Foro de Mujeres`;
 
 document.getElementById("moduleSections").innerHTML = moduleSections
   .map((section) => {
@@ -39,7 +40,7 @@ document.getElementById("moduleSections").innerHTML = moduleSections
         <div class="resource-list">
           ${resources
             .map((resource) => `
-              <a class="resource-link" href="${resource.href}" download>
+              <a class="resource-link" href="${resource.href}" target="_blank" rel="noopener noreferrer">
                 <span>${resource.label}</span>
                 <small>${resource.type}</small>
               </a>
