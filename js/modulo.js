@@ -1,27 +1,64 @@
 const params = new URLSearchParams(window.location.search);
-const moduleId = Number(params.get("id")) || 1;
+const moduleId = params.has("id") ? Number(params.get("id")) : 0;
 const moduleData = modules.find((item) => item.id === moduleId) || modules[0];
 
-const activityBox = document.getElementById("activityBox");
+const moduleSections = [
+  {
+    title: "Contenidos clave",
+    description: "Resumen del tema, ideas principales y guia de estudio del modulo."
+  },
+  {
+    title: "Foros y comunidad",
+    description: "Espacio para compartir dudas, comentarios y reflexiones con el grupo."
+  },
+  {
+    title: "Lecturas, bibliografia y enlaces",
+    description: "Recursos complementarios, referencias y enlaces recomendados."
+  },
+  {
+    title: "Materiales y ejercicios",
+    description: "Plantillas, documentos descargables y ejercicios practicos."
+  },
+  {
+    title: "Evaluacion",
+    description: "Actividad final, cuestionario o entrega asociada a este modulo."
+  }
+];
 
 document.getElementById("moduleType").textContent = `Actividad: ${moduleData.activityType}`;
 document.getElementById("moduleTitle").textContent = moduleData.title;
 document.getElementById("moduleDescription").textContent = moduleData.description;
 document.getElementById("moduleVideo").textContent = moduleData.videoText;
-document.getElementById("moduleTopic").textContent = moduleData.topic;
-document.getElementById("moduleActivityText").textContent = moduleData.activityText;
 
-if (moduleData.activityType === "Cuestionario") {
-  activityBox.innerHTML = `
-    <p>Tipo de entrega: ${moduleData.deliverable}</p>
-    <button class="button" type="button">Empezar cuestionario</button>
-  `;
-} else {
-  activityBox.innerHTML = `
-    <p>Tipo de entrega: ${moduleData.deliverable}</p>
-    <div class="link-list">
-      <a class="button" href="#">Abrir documento</a>
-      <a class="button button--light" href="#">Subir actividad</a>
-    </div>
-  `;
-}
+document.getElementById("moduleSections").innerHTML = moduleSections
+  .map((section) => {
+    const customSection = moduleData.sections?.[section.title] || {};
+    const resources = customSection.resources || [];
+    const resourcesHtml = resources.length
+      ? `
+        <div class="resource-list">
+          ${resources
+            .map((resource) => `
+              <a class="resource-link" href="${resource.href}" download>
+                <span>${resource.label}</span>
+                <small>${resource.type}</small>
+              </a>
+            `)
+            .join("")}
+        </div>
+      `
+      : "";
+
+    return `
+      <article class="module-section">
+        <span class="module-section__icon" aria-hidden="true"></span>
+        <div class="module-section__content">
+          <h3>${section.title}</h3>
+          <p>${customSection.description || section.description}</p>
+          ${resourcesHtml}
+        </div>
+        ${resources.length ? "" : '<a class="button button--light" href="#">Abrir</a>'}
+      </article>
+    `;
+  })
+  .join("");
