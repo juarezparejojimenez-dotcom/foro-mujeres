@@ -19,7 +19,7 @@
       <p class="hero__text">
         Espacio formativo con modulo 0, 6 modulos, materiales, actividades y certificado final.
       </p>
-      <a class="button" href="#modulos">Ver modulos</a>
+      <a class="button" href="#programa-mentoring">Ver programa</a>
     </div>
   </header>
 
@@ -43,6 +43,17 @@
           <p>Seccion de preguntas frecuentes y espacio de contacto con el profesorado.</p>
         </article>
       </div>
+    </section>
+
+    <section class="section program" id="programa-mentoring">
+      <div class="section__heading">
+        <p class="section__eyebrow">Programa</p>
+        <h2>Programa de Mentoring Humanitas ForoMS</h2>
+        <p>
+          Itinerario de acompañamiento humanista orientado al desarrollo del liderazgo, la mentoria con proposito y el crecimiento personal y profesional.
+        </p>
+      </div>
+      <a class="button" href="#modulos">Ver modulos</a>
     </section>
 
     <section class="section modules" id="modulos">
@@ -77,5 +88,14 @@
 
   <script src="js/modules-data.js"></script>
   <script src="js/app.js"></script>
+  <script>
+    document.title = "Humanitasforoms.org | Formación Humanista para el Liderazgo";
+    document.querySelector("h1").textContent = "Formación Humanista para el Liderazgo";
+
+    const platformName = document.querySelector(".site-logo, .logo, .brand, header a");
+    if (platformName) {
+      platformName.textContent = "Humanitasforoms.org";
+    }
+  </script>
 </body>
 </html>

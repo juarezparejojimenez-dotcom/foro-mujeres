@@ -84,7 +84,7 @@ const modules = [
           },
           {
             label: "Ficha 1 del modulo",
-            href: "src/modulo-0/evaluacion/ficha-1-modulo.docx",
+            href: "src/modulo-0/evaluacion/ficha-modulo/ficha-1-modulo.docx",
             type: "Word"
           },
           {
@@ -94,7 +94,7 @@ const modules = [
           },
           {
             label: "Rubrica ficha 4 - Actividad 1",
-            href: "src/modulo-0/evaluacion/rubrica-ficha-4-actividad-1.docx",
+            href: "src/modulo-0/evaluacion/rubrica/rubrica-ficha-4-actividad-1.docx",
             type: "Word"
           }
         ]
@@ -200,12 +200,12 @@ const modules = [
           },
           {
             label: "Ficha 1 del modulo",
-            href: "src/modulo-1/evaluacion/ficha-1-modulo.docx",
+            href: "src/modulo-1/evaluacion/ficha-modulo/ficha-1-modulo.docx",
             type: "Word"
           },
           {
             label: "Rubrica",
-            href: "src/modulo-1/evaluacion/rubrica.docx",
+            href: "src/modulo-1/evaluacion/rubrica/rubrica.docx",
             type: "Word"
           }
         ]
